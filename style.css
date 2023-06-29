@@ -1,0 +1,47 @@
+:root{
+    --color-header: #2B303A;
+    --color-text: #EEE5E9;
+    --color-one: #92DCE5;
+    --color-three: #7C7C7C;
+    --color-four: #D64933;
+    --padding-header: 10px;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+header {
+    padding: var(--padding-header);
+    color: var(--color-text);
+    background-color: var(--color-header);
+    width: 100%;
+    text-align: center;
+}
+
+html,
+body 
+{
+    height: 100vh;
+    border: 1px solid red;
+}
+
+body {
+    border: 1px solid green;
+}
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.calculator-background {
+    margin: 50px;
+    padding: 5px;
+    width: 500px;
+    height: 600px;
+    background-color: var(--color-header);
+    border-radius: 25px;
+}
