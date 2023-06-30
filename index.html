@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Calculator</title>
     <link rel="stylesheet" href="reset.css">
@@ -6,22 +7,46 @@
     <script src="javascript.js" defer></script>
 </head>
 <html>
-    <body>
-        <header>
-            <h1>Calculator</h1>
-        </header>
-        <div class="main">
-            <div class="calculator-background">
 
+<body>
+    <header>
+        <h1>Calculator</h1>
+    </header>
+    <div class="main">
+        <div class="calculator-background">
+            <input type="text" class="display" disabled>
+            <div class="calculator-items">
+                <button id="clear" type="button" value="clear" class="grid-col-span-2 button-del">Clear</button>
+                <button id="delete" type="button" value="delete" class="grid-col-span-2 button-del">Delete</button>
+                <button id="on" type="button" value="on" class="button-on">ON</button>
+
+                <button id="7" type="button" value="7" class="numbers">7</button>
+                <button id="8" type="button" value="8" class="numbers">8</button>
+                <button id="9" type="button" value="9" class="numbers">9</button>
+                <button id="multiply" type="button" value="x" class="operator">X</button>
+                <button id="percent" type="button" value="%" class="operator">%</button>
+
+                <button id="4" type="button" value="4" class="numbers">4</button>
+                <button id="5" type="button" value="5" class="numbers">5</button>
+                <button id="6" type="button" value="6" class="numbers">6</button>
+                <button id="subtract" type="button" value="-" class="operator">-</button>
+                <button id="divide" type="button" value="/" class="operator">/</button>
+
+                <button id="1" type="button" value="1" class="numbers">1</button>
+                <button id="2" type="button" value="2" class="numbers">2</button>
+                <button id="3" type="button" value="3" class="numbers">3</button>
+                <button id="add" type="button" value="+" class="grid-row-span-2 grid-col-start-4 operator">+</button>
+                <button id="total" type="button" value="=" class="grid-row-span-2 grid-col-start-5 operator">=</button>
+
+                <button id="0" type="button" value="0" class="numbers">0</button>
+                <button id="00" type="button" value="00" class="numbers">00</button>
+                <button id="decimal" type="button" value="." class="numbers">.</button>
             </div>
-<!-- set a max width for calculator -->
-<!-- Create the background -->
-<!-- Create the display -->
-<!-- Create the buttons -->
+        </div>
+    </div>
+    <footer>
 
-        </main>
-        <footer>
+    </footer>
+</body>
 
-        </footer>
-    </body>
 </html>

@@ -1,4 +1,4 @@
-[ ] Make the calculator
+[x] Make the calculator
 [ ] Get buttons to work the display
 [ ] Get buttons to calculate
 [ ] Get calculate to display calculation
