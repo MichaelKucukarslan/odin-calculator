@@ -1,9 +1,10 @@
 :root{
     --color-header: #2B303A;
     --color-text: #EEE5E9;
-    --color-one: #92DCE5;
-    --color-three: #7C7C7C;
-    --color-four: #D64933;
+    --color-button-clear: #4664d1;
+    --color-button-operator: #b0b0b0;
+    --color-button-number: #696969;
+    --color-button-orange: #D64933;
     --padding-header: 10px;
 }
 
@@ -30,6 +31,7 @@ body
 body {
     border: 1px solid green;
 }
+
 .main {
     width: 100%;
     height: 100%;
@@ -39,9 +41,73 @@ body {
 
 .calculator-background {
     margin: 50px;
-    padding: 5px;
+    padding: 10px;
     width: 500px;
     height: 600px;
     background-color: var(--color-header);
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.display {
+    width: 100%;
+    margin: 0px 10px 15px 10px;
+    height: 20%;
+    border-radius: 25px;
+    justify-content: center;
+    background-color: rgb(215, 215, 215);
+}
+
+.numbers {
+    background-color: var(--color-button-number);
+}
+
+.operator {
+    background-color: var(--color-button-operator);
+}
+
+.button-on {
+    background-color: var(--color-button-orange);
+}
+.calculator-items {
+    display: grid;
+    height: 80%;
+    gap: .5rem;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    height: 100%;
+    border-radius: 15px;
+    font-size: 32px;
+    color: var(--color-text);
+}
+.button-on {
+    background-color: var(--color-button-orange);
+}
+
+.button-del {
+    background-color: var(--color-button-clear);
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+.grid-row-span-2 {
+    grid-row: 4 / span 2;
+}
+
+.grid-col-start-4 {
+    grid-column-start: 4;
+}
+
+.grid-col-start-5 {
+    grid-column-start: 5;
 }
