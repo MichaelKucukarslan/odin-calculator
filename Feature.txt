@@ -1,5 +1,5 @@
 [x] Make the calculator
-[ ] Get buttons to work the display
+[x] Get buttons to work the display
 [ ] Get buttons to calculate
 [ ] Get calculate to display calculation
-[ ] Get delete button to work
+[x] Get delete button to work
