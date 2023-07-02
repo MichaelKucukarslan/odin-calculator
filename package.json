@@ -1,0 +1,14 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "First attempt at unit testing",
+  "main": "javascript.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Michael Kucukarslan",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}

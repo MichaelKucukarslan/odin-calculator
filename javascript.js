@@ -17,63 +17,41 @@ operators.forEach(element =>
     element.addEventListener("click", () => setOperator(element.textContent))
 );
 
-// > user presses keys to get another number
-
-// > user presses operation
-// do the operation
-// show the user the total
-// save the total as number1, clear number2
-
-// > users presses total key
-// do the operation
-// show the users the total
-// save the total as number1, clear number2
-
-// > user presses another operation to do a different operation
-// change the operation without loosing number1
-
 function setOperator(operation) {
     // Save the number
+    console.log(number1 + " " + operation + " " + number2 + " ClearScreen? " + clearScreen + " savedOperation: " + operation );
     savedOperation = operation;
     if (number1 === null) {
         number1 = display.value;
         clearScreen = true;
     } else if (number2 === null && !clearScreen) {
         number2 = display.value;
-        calculate(operation, number1, number2);
+        display.value = calculate(operation, number1, number2);
+        continueNewCalculation();
     }
-    console.log(number1 + " " + savedOperation + " " + number2)
+    console.log(number1 + " " + operation + " " + number2 + " ClearScreen? " + clearScreen + " savedOperation: " + operation );
 }
 
 function calculate(operation, num1, num2) {
     switch (operation) {
         case 'X':
-            display.value = num1 * num2;
-            break;
+            return (num1 * num2);
         case '-':
-            display.value = num1 - num2;
-            break;
+            return (num1 - num2);
         case '+':
-            display.value = parseInt(num1) + parseInt(num2); // Need to get decimals
-            break;
+            return (parseInt(num1) + parseInt(num2)); // Need to get decimals
         case '%':
-            display.value = display.value / 100;
-            break;
+            return (display.value / 100);
         case '/':
             if (num2 == 0) {
                 alert("Can not divide by 0");
                 clear();
-                display.value = 0;
-                return;
+                return (0);
             }
-            display.value = num1 / num2;
-            break;
+            return  (num1 / num2);
         default:
-            break;
+            return 0;
     }
-    console.log(number1 + " " + savedOperation + " " + number2 + " ClearScreen? " + clearScreen + " Operand: " + operation);
-    continueNewCalculation();
-    console.log(number1 + " " + savedOperation + " " + number2 + " ClearScreen? " + clearScreen + " Operand: " + operation);
 }
 
 function continueNewCalculation() {
@@ -88,11 +66,13 @@ const button_total = document.getElementById("total");
 button_total.addEventListener("click", button_total_func);
 function button_total_func() {
     if (number1 != null && number2 == null){
+        console.log("Here")
         number2 = display.value;
-        calculate(savedOperation, number1, number2);
-        return;
+        display.value = calculate(savedOperation, number1, number2);
+        // return;
     }
     continueNewCalculation();
+    // console.log(number1 + " " + operation + " " + number2 + " ClearScreen? " + clearScreen + " savedOperation: " + operation );
 }
 
 // Handle decimal button
@@ -147,3 +127,11 @@ function clear() {
     savedOperation = null;
     clearScreen = true;
 }
+
+module.exports = {
+    appendNumber,
+    button_decimal_func,
+    button_total_func,
+    calculate,
+    setOperator
+};
