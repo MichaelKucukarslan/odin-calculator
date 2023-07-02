@@ -25,11 +25,10 @@ html,
 body 
 {
     height: 100vh;
-    border: 1px solid red;
 }
 
 body {
-    border: 1px solid green;
+    width: 100%;
 }
 
 .main {
