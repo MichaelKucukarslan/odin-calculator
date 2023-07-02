@@ -59,13 +59,16 @@ body {
     border-radius: 25px;
     justify-content: center;
     background-color: rgb(215, 215, 215);
+    font-size: 96px;
+    text-align: right;
+    clear: both;
 }
 
-.numbers {
+.numbers, .decimal {
     background-color: var(--color-button-number);
 }
 
-.operator {
+.operator, #total {
     background-color: var(--color-button-operator);
 }
 
